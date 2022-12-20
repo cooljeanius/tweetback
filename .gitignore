@@ -3,3 +3,8 @@ node_modules/
 _site
 .env
 package-lock.json
+*.swp
+
+# temporary, until I find a way to better organize them, so that I wouldn't be
+# committing so many all at once:
+img/*.jpeg
