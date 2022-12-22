@@ -31,5 +31,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.on('eleventy.after', () => {
 		console.log('indexing search using pagefind');
 		execSync(`npx pagefind --source _site --glob \"[0-9]*/**/*.html\"`, { encoding: 'utf-8' });
-  });
+  	});
+	return {pathPrefix: "/_site/"}
 };
