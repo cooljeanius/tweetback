@@ -1,6 +1,7 @@
 {
-  "name": "tweetback",
+  "name": "@tweetback/tweetback",
   "version": "1.0.0",
+  "private": true,
   "description": "Take ownership of your Twitter data and host your own Twitter archive.",
   "scripts": {
     "clean": "rm -rf .cache",
@@ -23,6 +24,7 @@
     "country-emoji": "^1.5.6",
     "dotenv": "^16.0.3",
     "emoji-regex": "^10.2.1",
+    "entities": "^4.4.0",
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
     "pagefind": "^0.10.6",
@@ -33,7 +35,6 @@
     "twitter-lite": "^1.1.0"
   },
   "dependencies": {
-    "@11ty/is-land": "^3.0.0",
-    "chartist": "^0.11.4"
+    "@11ty/is-land": "^3.0.0"
   }
 }
