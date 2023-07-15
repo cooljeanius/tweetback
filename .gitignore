@@ -8,3 +8,4 @@ package-lock.json
 # temporary, until I find a way to better organize them, so that I wouldn't be
 # committing so many all at once:
 img/*.jpeg
+video/*.mp4
