@@ -28,7 +28,7 @@
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
     "pagefind": "^1.0.3",
-    "parse-domain": "^7.0.1",
+    "parse-domain": "^8.0.1",
     "sentiment": "^5.0.2",
     "sqlite3": "^5.1.6",
     "swearjar": "^0.2.0",
