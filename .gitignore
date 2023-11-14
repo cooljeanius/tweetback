@@ -3,3 +3,9 @@ node_modules/
 _site
 .env
 package-lock.json
+
+# temporary, until I find a way to better organize them, to avoid
+# committing so many all at once:
+img/*.jpeg
+video/*.mp4
+database/tweet.db
