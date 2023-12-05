@@ -9,10 +9,10 @@
     "import-without-circles": "npm run import -- removecircletweets",
     "fetch-new-data": "node database/fetchFromApi.js",
     "build": "npx @11ty/eleventy --quiet",
-    "build:heavy": "npx @11ty/eleventy --incremental",
+    "build:heavy": "NODE_OPTIONS=--max-old-space-size=12288 npx @11ty/eleventy --incremental",
     "start": "npx @11ty/eleventy --quiet --serve",
-    "start:heavy": "NODE_OPTIONS=--max-old-space-size=12288 npx @11ty/eleventy --serve > buildlog2.txt",
-    "start:heavylog": "NODE_OPTIONS=--max-old-space-size=7168 DEBUG=* npx @11ty/eleventy --serve > buildlog2.txt",
+    "start:heavy": "NODE_OPTIONS=--max-old-space-size=12288 npx @11ty/eleventy --serve | tee buildlog2.txt",
+    "start:heavylog": "NODE_OPTIONS=--max-old-space-size=7168 DEBUG=* npx @11ty/eleventy --serve | tee buildlog2.txt",
     "sizecheck": "du -sh _site"
   },
   "keywords": [],
