@@ -46,6 +46,7 @@ module.exports = async function(data) {
 
 		<link rel="profile" href="https://microformats.org/profile/hatom">
 		<link rel="stylesheet" href="/assets/style.css">
+		<link rel="me" value="https://social.treehouse.systems/@egallager" />
 		<script src="/assets/script.js" type="module"></script>
 		<script src="/assets/is-land.js" type="module"></script>
 
