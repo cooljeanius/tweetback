@@ -3,3 +3,6 @@ node_modules/
 _site
 .env
 package-lock.json
+database/tweet.db
+img/*.jpeg
+video/*.mp4
