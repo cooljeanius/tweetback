@@ -3,9 +3,12 @@ node_modules/
 _site
 .env
 package-lock.json
+*.swp
+*.gz
 
-# temporary, until I find a way to better organize them, to avoid
+# temporary, until I find a way to better organize them, so that I wouldn't be
 # committing so many all at once:
 img/*.jpeg
+img/*.jpg
 video/*.mp4
 database/tweet.db

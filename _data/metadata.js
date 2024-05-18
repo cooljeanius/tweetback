@@ -1,9 +1,17 @@
+require("dotenv").config();
+
 let data = {
-	username: "eleven_ty", // No leading @ here
-	homeLabel: "11ty.dev",
-	homeUrl: "https://www.11ty.dev/",
+	username: "cooljeanius", // No leading @ here
+	homeLabel: "cooljeanius.github.io",
+	homeUrl: "https://cooljeanius.github.io/tweetback/",
+	baseURL:
+		process.env.ENV == "local"
+			? "http://localhost:8080"
+			: "https://cooljeanius.github.io/my_tweetback_archive",
+	language: "en-US",
 };
 
-data.avatar = `https://v1.indieweb-avatar.11ty.dev/${encodeURIComponent(data.homeUrl)}/`;
+data.avatar = `${data.baseUrl}/img/avatar.jpeg`;
 
 module.exports = data;
+
