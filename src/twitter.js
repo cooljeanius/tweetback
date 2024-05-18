@@ -106,11 +106,11 @@ class Twitter {
 		return this._isMentionCheck(tweet);
 	}
 
-	// isAmbiguousReplyMention(tweet) {
-	// 	let days = 365;
-	// 	let comparisonDate = new Date(2012, 5, Date.now() - 1000*60*60*24*days);
-	// 	return this._isMentionCheck(tweet) && (tweet.date - comparisonDate > 0);
-	// }
+	isAmbiguousReplyMention(tweet) {
+		let days = 365;
+		let comparisonDate = new Date(2012, 5, Date.now() - 1000*60*60*24*days);
+		return this._isMentionCheck(tweet) && (tweet.date - comparisonDate > 0);
+	}
 
 	getUrlObject(url) {
 		let expandedUrl = url.expanded_url ?? url.url;
