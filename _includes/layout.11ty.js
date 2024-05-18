@@ -45,8 +45,7 @@ module.exports = async function(data) {
 		<meta name="description" content="${meta_description}" />
 
 		<link rel="profile" href="https://microformats.org/profile/hatom">
-		<link rel="stylesheet" href="/assets/style.css">
-		<a rel="me" href="https://social.treehouse.systems/@egallager">Mastodon</a>
+		<link rel="stylesheet" href="/assets/style.css">	
 		<script src="/assets/script.js" type="module"></script>
 		<script src="/assets/is-land.js" type="module"></script>
 
@@ -68,6 +67,7 @@ module.exports = async function(data) {
 		</main>
 		<footer>
 			<p>An open source project from <a href="https://github.com/tweetback">tweetback</a>.</p>
+			<p><a rel="me" href="https://social.treehouse.systems/@egallager">${data.metadata.username}’s Mastodon</a></p>
 		</footer>
 	</body>
 </html>`;
