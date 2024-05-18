@@ -16,13 +16,13 @@ on:
   push:
     branches:
       - main
-      - egallager_main
+      - egallager_main*
       - dependabot/*
   pull_request:
     # The branches below must be a subset of the branches above
     branches:
       - main
-      - egallager_main
+      - egallager_main*
       - dependabot/*
   schedule:
     - cron: '45 9 * * 6'

@@ -10,10 +10,16 @@ name: njsscan sarif
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - egallager_main*
+      - dependabot/*
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches:
+      - main
+      - egallager_main*
+      - dependabot/*
   schedule:
     - cron: '36 13 * * 6'
 
