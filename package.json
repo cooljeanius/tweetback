@@ -8,12 +8,17 @@
     "import": "node database/import-from-archive.js",
     "import-without-circles": "npm run import -- removecircletweets",
     "fetch-new-data": "node database/fetchFromApi.js",
-    "build": "npx @11ty/eleventy --quiet",
-    "start": "npx @11ty/eleventy --quiet --serve"
+    "build": "npx @11ty/eleventy --quiet --pathprefix=my_tweetback_archive",
+    "build:heavy": "NODE_OPTIONS=--max-old-space-size=12288 npx @11ty/eleventy --incremental --pathprefix=my_tweetback_archive",
+    "start": "npx @11ty/eleventy --quiet --serve --pathprefix=my_tweetback_archive",
+    "start:heavy": "NODE_OPTIONS=--max-old-space-size=12288 npx @11ty/eleventy --serve --pathprefix=my_tweetback_archive | tee buildlog2.txt",
+    "start:heavylog": "NODE_OPTIONS=--max-old-space-size=7168 DEBUG=* npx @11ty/eleventy --serve --pathprefix=my_tweetback_archive | tee buildlog2.txt",
+    "sizecheck": "du -sh _site"
   },
   "keywords": [],
   "contributors": [
-    "Zach Leatherman <zachleatherman@gmail.com> (https://zachleat.com/)"
+    "Zach Leatherman <zachleatherman@gmail.com> (https://zachleat.com/)",
+    "Eric Gallager <egall@gwmail.gwu.edu> (https://linktr.ee/ericgallager)"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -35,6 +40,7 @@
     "twitter-lite": "^1.1.0"
   },
   "dependencies": {
-    "@11ty/is-land": "^4.0.0"
+    "@11ty/is-land": "^3.0.0",
+    "chartist": "^0.11.4"
   }
 }
