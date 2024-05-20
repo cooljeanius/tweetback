@@ -219,6 +219,7 @@ class Index extends Twitter {
 		let {transform: twitterLink} = await import("@tweetback/canonical");
 
 		let tweets = await dataSource.getAllTweets();
+		// FIXME: clamp to before September 25th, 2023: https://github.com/cooljeanius/tweetback/issues/13
 		let last12MonthsTweets = tweets.filter(tweet => tweet.date - new Date(Date.now() - 1000*60*60*24*365) > 0);
 
 		let tweetCount = tweets.length;
@@ -362,11 +363,11 @@ class Index extends Twitter {
 		<p>***: does not include retweets</p>
 
 		<template id="rendered-twitter-link"><a href="/1234567890123456789/">twitter link</a></template>
-		<a rel="me" href="https://social.treehouse.systems/@egallager">Mastodon</a>
+		<a rel="me" href="https://social.treehouse.systems/@egallager">My Mastodon</a>
 		<h3>Before 2012, it was not possible to tell the difference between a mention and reply. This happened ${this.renderNumber(ambiguousReplyMentionCount)} times (${this.renderPercentage(ambiguousReplyMentionCount, tweetCount)})</h3>
 
-		<h3>I’ve sent someone a mention ${this.renderNumber(mentionNotReplyCount)} times (${this.renderPercentage(mentionNotReplyCount, tweetCount)})</h3>
-		<p>Mentions are tweets sent to a single person but not as a reply to an existing tweet. Note that this number is overinflated for old data—Twitter didn’t support official replies before July 2012.</p>
+		<h3>As mentioned previously, I’ve sent someone a mention ${this.renderNumber(mentionNotReplyCount)} times (${this.renderPercentage(mentionNotReplyCount, tweetCount)})</h3>
+		<p>Mentions are tweets sent to a single person but not as a reply to an existing tweet. Note that this number is overinflated for old data—Twitter didn’t support official replies before July 2012, and I joined in 2011.</p>
 `;
 	}
 }
