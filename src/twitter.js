@@ -124,7 +124,9 @@ class Twitter {
 		}
 
 		// Links to other tweets
-		if(displayUrl.startsWith("https://twitter.com") && displayUrl.indexOf("/status/") > -1) {
+		const urlObj = new URL(displayUrl);
+		const allowedHosts = ["twitter.com"];
+		if(allowedHosts.includes(urlObj.host) && displayUrl.indexOf("/status/") > -1) {
 			displayUrl = displayUrl.substring("https://twitter.com/".length);
 			displayUrl = displayUrl.replace("/status/", "/");
 			displayUrl = `@${displayUrl}`;
